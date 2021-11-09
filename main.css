@@ -1620,15 +1620,20 @@ a:visited {
 /** Cat UI Markdown **/
 
 article {
-    color: #444;
-    font-family: "Microsoft YaHei";
+	color: #444;
+	font-family: microsoft yahei
+}
+
+article p {
+	line-height: 24px
 }
 
 article code {
-    border-radius: 3px;
-    padding: 1px 5px 1px 5px;
-    border: 1px solid #ddd;
-    background: #f6f6f6;
+	background-color: rgba(27,31,35,.05);
+	border-radius: 6px;
+	font-size: 85%;
+	padding: .2em .4em;
+	font-family: Consolas
 }
 
 article code::-webkit-scrollbar {
@@ -1723,7 +1728,7 @@ article h5,
 article h6 {
     font-weight: normal;
     color: #111;
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
 article h4,
@@ -1736,34 +1741,63 @@ article h6 {
 article h4:before,
 article h5:before,
 article h6:before {
-    display: inline-block;
-    width: 20px;
-    content: '#';
-    color: #F4696A;
+	display: inline-block;
+	width: 1em;
+	content: '#';
+	color: #ff4e6a
 }
 
 article h1 {
-    font-size: 1.8em;
+	font-size: 2.5em
 }
 
 article h2 {
-    font-size: 1.5em;
+	font-size: 1.7em;
+	position: relative;
+	padding-bottom: 10px
+}
+
+article h2:before {
+	content: '';
+	width: 100%;
+	padding: 0 25px;
+	border-bottom: 1px solid #eee;
+	position: absolute;
+	bottom: -1px;
+	left: -25px;
+	box-sizing: unset
+}
+
+article h2:after {
+	transition: all .35s ease-out;
+	content: '';
+	position: absolute;
+	background: #ff4e6a;
+	width: 1em;
+	height: 5px;
+	bottom: -3px;
+	left: 0;
+	border-radius: 10px
+}
+
+article h2:hover:after {
+	width: 2em
 }
 
 article h3 {
-    font-size: 1.3em;
+	font-size: 1.3em
 }
 
 article h4 {
-    font-size: 1.15em;
+	font-size: 1.15em
 }
 
 article h5 {
-    font-size: 1em;
+	font-size: 1em
 }
 
 article h6 {
-    font-size: 0.9em;
+	font-size: .9em
 }
 
 article blockquote {
